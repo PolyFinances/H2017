@@ -1,5 +1,5 @@
 from datetime import datetime, date
-from Basics.stock import Stock
+#from Basics.stock import Stock
 
 
 class Portfolio(object):
@@ -39,7 +39,7 @@ class Portfolio(object):
         return self.__name
 
     @name.setter
-    def name(self, new_name: str):
+    def name(self, new_name):
         if isinstance(new_name, str):
             self.__name = new_name
         else:
@@ -50,7 +50,7 @@ class Portfolio(object):
         return self.__cash
 
     @cash.setter
-    def cash(self, new_cash: float):
+    def cash(self, new_cash):
         if isinstance(new_cash, float):
             self.__cash = round(new_cash, 2)
         else:
@@ -112,7 +112,7 @@ class Portfolio(object):
                 return False, problem
 
             elif str.upper(transaction.transaction_type) == 'SELL' and shares - transaction.quantity < 0:
-                problem = 'Vous ne possédez pas les actions que vous voulez vendre.'
+                problem = 'Vous ne possedez pas les actions que vous voulez vendre.'
                 return False, problem
 
             else:
@@ -268,9 +268,9 @@ if __name__ == '__main__':
     on_date = date(2016, 1, 24)
     print(p1.compute_shares(symbol, on_date), "Shares on :", on_date)
 
-    stock1 = Stock(symbol)
-    stock1.get_data()
+    #stock1 = Stock(symbol)
+    #stock1.get_data()
 
-    value = float(stock1.price) * p1.compute_shares(stock1.ticker)
+    #value = float(stock1.price) * p1.compute_shares(stock1.ticker)
 
-    print(value)
+    #print(value)

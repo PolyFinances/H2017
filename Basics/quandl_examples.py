@@ -2,9 +2,9 @@ import quandl
 import matplotlib.pyplot as plt
 from Basics.tickerchanger import quandl_to_yahoo
 
-# Sans votre clé le nombre d'appel aux databases est limité
+# Sans votre cle le nombre d'appel aux databases est limite
 
-# your_key = 'Inscrivez votre clé pour API'
+# your_key = 'Inscrivez votre cle pour API'
 # quandl.ApiConfig.api_key = your_key
 
 symbol = "TO_BBD_A"
